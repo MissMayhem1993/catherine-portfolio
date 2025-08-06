@@ -1,0 +1,78 @@
+// components/_navbar.scss
+.u-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: $u-color-light;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  &__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $u-color-dark;
+    text-decoration: none;
+  }
+
+  &__toggle {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: $u-color-dark;
+
+    @include respond-to(md) {
+      display: block;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+
+    @include respond-to(md) {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background: $u-color-light;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      padding: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
+      &.is-open {
+        display: flex;
+      }
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 1rem;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $u-color-dark;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $u-color-primary;
+    }
+  }
+}

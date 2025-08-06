@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catherine McGraw | Portfolio</title>
+  <link rel="stylesheet" href="dist/style.css" />
+</head>
+<body>
+  <a href="#main" class="u-skip-link">Skip to main content</a>
+
+  <nav class="u-navbar" role="navigation" aria-label="Main navigation">
+    <div class="u-navbar__container">
+      <a href="#" class="u-navbar__logo">Catherine McGraw</a>
+      <button class="u-navbar__toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <ul class="u-navbar__menu">
+        <li class="u-navbar__item"><a href="#bio" class="u-navbar__link">About</a></li>
+        <li class="u-navbar__item"><a href="#projects" class="u-navbar__link">Projects</a></li>
+        <li class="u-navbar__item"><a href="#contact" class="u-navbar__link">Contact</a></li>
+        <li class="u-navbar__item"><a href="Resume%208.3.25.html" class="u-navbar__link" download>Download Resume</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main" tabindex="-1">
+    <section id="bio" class="u-card" aria-labelledby="bio-heading">
+      <div class="u-card__image">
+        <img src="20250218_022836.jpg" alt="Headshot of Catherine McGraw" />
+      </div>
+      <div class="u-card__content">
+        <h1 id="bio-heading" class="u-card__title">Hi, I'm Catherine!</h1>
+        <p class="u-card__text">
+          I'm a front-end developer and designer based in Missouri. I enjoy building accessible, responsive websites that help people connect and communicate. I'm currently seeking opportunities to grow as a developer and collaborator.
+        </p>
+      </div>
+    </section>
+
+    <section id="projects" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Latest Projects</h2>
+      <div class="u-grid u-grid--3col u-grid--gap-lg u-grid--fullwidth">
+
+        <div class="u-grid__item">
+          <h3 class="u-card__title">Project 1: Animal Trading Card</h3>
+          <p class="u-card__text">A fun HTML/CSS project recreating a custom trading card. This was my first web development project and taught me a lot about semantic structure and layout techniques.</p>
+        </div>
+
+        <div class="u-grid__item">
+          <h3 class="u-card__title">Project 2: Resume Website</h3>
+          <a href="Resume%208.3.25.html" download class="u-button" aria-label="Download resume project">Download Project</a>
+          <p class="u-card__text">A professional resume site built with clean HTML and CSS. Designed to be printable and responsive, showcasing my skills and past work experience.</p>
+        </div>
+
+        <div class="u-grid__item">
+          <h3 class="u-card__title">Project 3: Portfolio Website</h3>
+          <p class="u-card__text">The site you're viewing right now! Built using semantic HTML and modular SCSS with a BEM-based architecture. Focused on accessibility and mobile-first design.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+      <address>
+        <p>Email: <a href="mailto:catherine93.mcgraw@gmail.com">catherine93.mcgraw@gmail.com</a></p>
+        <p>Phone: <a href="tel:4173914333">417-391-4333</a></p>
+        <p>
+          <a href="https://www.linkedin.com/in/catherine-mcgraw-205853296" target="_blank" rel="noopener">LinkedIn</a> |
+          <a href="https://www.github.com/missmayhem1993" target="_blank" rel="noopener">GitHub</a>
+        </p>
+      </address>
+    </section>
+  </main>
+
+  <footer class="u-footer" role="contentinfo">
+    <p>&copy; 2025 Catherine McGraw. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const toggleButton = document.querySelector('.u-navbar__toggle');
+    const menu = document.querySelector('.u-navbar__menu');
+    const links = document.querySelectorAll('.u-navbar__link');
+
+    toggleButton.addEventListener('click', () => {
+      const isOpen = menu.classList.toggle('is-open');
+      toggleButton.setAttribute('aria-expanded', isOpen);
+    });
+
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          menu.classList.remove('is-open');
+          toggleButton.setAttribute('aria-expanded', false);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
