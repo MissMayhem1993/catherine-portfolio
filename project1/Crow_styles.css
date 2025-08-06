@@ -1,0 +1,103 @@
+.html {
+    background-color: rgb(255, 255, 255);
+}
+
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+}
+
+
+.card {
+    border: rgb(72, 72, 72) 15px solid;
+    border-style: border-box;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    box-shadow: #e4dbdbc2 5px 10px;
+    background-color: rgb(139, 137, 137);
+    inline-size: 300px;
+    block-size: auto;
+    margin: 10px;
+    padding: 10px;
+}
+
+
+h3 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  
+    font-size: 30px;
+    margin-block-end: 10px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    border: dashed 5px rgb(83, 79, 79);
+    padding: 5px;
+    text-align: center;
+
+}
+
+
+.italicized { 
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+img {
+    inline-size: 300px ; 
+    max-inline-size: 100%;
+    block-size: auto;
+    object-fit: contain;
+    border-radius: 42px;
+    box-shadow: 0 4px 7px rgba(186, 180, 180, 0.662);
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    margin-block-start: 10px;
+    display: block;
+    border: 2.5px solid rgb(72, 72, 72);
+    padding: 2.5px;
+}
+
+
+li {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+
+span {
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: bold;
+}
+
+
+ul {
+    list-style-type: none;
+    padding: 5px;
+}
+
+
+.info {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    margin-block-start: 10px;
+    text-align: center;
+    border: #6b6868ac 4px ridge;
+    padding: 5px;
+}
+
+
+hr {
+    border: none;
+    border-block-start: 2px dashed #545151; 
+    margin: 4px 0;  
+    inline-size: 80%;
+    block-size: 2px;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+}
