@@ -1,17 +1,1 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 2 | @import 'base/global';
- *   |         ^^^^^^^^^^^^^
- *   '
- *   src\main.scss 2:9  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 2 \2502  @import 'base/global';\d\a   \2502          ^^^^^^^^^^^^^\a   \2575 \a   src\\main.scss 2:9  root stylesheet";
-}
+body{margin:0;font-family:"Lato",sans-serif;background-color:#f9f9f9;color:#333}img{max-width:100%;height:auto;display:block}.u-navbar{position:fixed;top:0;width:100%;background:#fff;border-bottom:1px solid #ccc;z-index:1000}.u-navbar__container{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:1rem}.u-navbar__menu{display:flex;list-style:none;gap:1rem}@media(max-width: 768px){.u-navbar__menu{display:none;flex-direction:column;background:#fff;position:absolute;top:100%;left:0;width:100%;border-top:1px solid #ccc}.u-navbar__menu.is-open{display:flex}}.u-navbar__link{text-decoration:none;color:#333;padding:.5rem}.u-card{display:flex;gap:1rem;padding:1rem;margin-top:5rem}.u-card__image{border:4px solid #ccc;border-radius:8px;overflow:hidden;max-width:300px}.u-card__image img{display:block;width:100%;height:auto}.u-card__content{flex:1}.u-grid{display:grid;gap:1rem}.u-grid--3col{grid-template-columns:repeat(3, 1fr)}@media(max-width: 768px){.u-grid--3col{grid-template-columns:1fr}}.u-grid__item{border:1px solid #ccc;padding:1rem}.u-footer{text-align:center;padding:1rem;background:#fff;border-top:1px solid #ccc}
