@@ -1,0 +1,11 @@
+{
+  "name": "catherine-portfolio",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "sass src/main.scss dist/style.css --no-source-map --style=compressed",
+    "watch": "sass --watch src/main.scss dist/style.css --style=expanded"
+  },
+  "devDependencies": {
+    "sass": "^1.90.0"
+  }
+}

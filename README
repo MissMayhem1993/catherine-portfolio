@@ -1,0 +1,80 @@
+# Catherine McGraw Portfolio
+
+This is a personal portfolio website built with semantic HTML and custom SCSS using BEM naming conventions. It is fully responsive, accessible, and deployable to GitHub Pages.
+
+---
+
+## 📁 Project Structure
+
+```
+project-root/
+├── index.html              # Main HTML file
+├── dist/
+│   └── style.css           # Compiled CSS output
+├── src/
+│   ├── main.scss           # SCSS entry point
+│   ├── base/
+│   │   ├── _variables.scss
+│   │   └── _mixins.scss
+│   └── components/
+│       ├── _navbar.scss
+│       ├── _card.scss
+│       ├── _grid.scss
+│       ├── _button.scss
+│       └── _footer.scss
+├── images/                 # Headshot, project images, etc.
+├── package.json            # NPM setup
+└── README.md               # This file
+```
+
+---
+
+## 🛠️ Build Instructions
+
+### 1. Install Dependencies
+```bash
+npm install
+```
+
+### 2. Build SCSS
+```bash
+npm run build
+```
+
+### 3. Watch for Changes
+```bash
+npm run watch
+```
+
+Make sure your Sass files compile into `dist/style.css` correctly.
+
+---
+
+## ♿ Accessibility
+
+This project is built to meet [WCAG 2.1 A and AA](https://www.w3.org/WAI/WCAG21/quickref/) standards:
+
+- Keyboard navigable
+- Skip to content link
+- Semantic headings and landmark roles
+- Sufficient color contrast and alt text
+- No keyboard traps
+
+---
+
+## 🚀 Deployment
+
+To deploy to GitHub Pages:
+
+1. Push to your GitHub repo
+2. Go to Settings > Pages
+3. Set source to your root or `/docs` folder
+4. Ensure `index.html` and `dist/style.css` are committed
+
+---
+
+## 👩‍💻 Author
+
+Catherine McGraw  
+📧 [catherine93.mcgraw@gmail.com](mailto:catherine93.mcgraw@gmail.com)  
+🔗 [LinkedIn](https://www.linkedin.com/in/catherine-mcgraw-205853296) | [GitHub](https://github.com/missmayhem1993)

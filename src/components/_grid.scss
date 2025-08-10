@@ -1,0 +1,17 @@
+.u-grid {
+  display: grid;
+  gap: $u-spacing;
+
+  &--3col {
+    grid-template-columns: repeat(3, 1fr);
+
+    @media (max-width: $u-breakpoint-sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    border: 1px solid $u-color-border;
+    padding: $u-spacing;
+  }
+}

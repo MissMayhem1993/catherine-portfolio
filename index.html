@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catherine McGraw | Portfolio</title>
+  <link rel="stylesheet" href="dist/style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="u-navbar" role="navigation" aria-label="Main navigation">
+    <div class="u-navbar__container">
+      <a href="#" class="u-navbar__logo">Catherine McGraw</a>
+      <button class="u-navbar__toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <ul class="u-navbar__menu">
+        <li class="u-navbar__item"><a href="#bio" class="u-navbar__link">About</a></li>
+        <li class="u-navbar__item"><a href="#projects" class="u-navbar__link">Projects</a></li>
+        <li class="u-navbar__item"><a href="#contact" class="u-navbar__link">Contact</a></li>
+        <li class="u-navbar__item"><a href="Resume.html" class="u-navbar__link" download>Resume</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main id="main" tabindex="-1">
+    <!-- Bio Card -->
+    <section id="bio" class="u-card u-card--bio">
+      <div class="u-card__image">
+        <img src="images/bio.jpg" alt="Headshot of Catherine McGraw" />
+      </div>
+      <div class="u-card__content">
+        <h1 class="u-card__title">Hi, I'm Catherine!</h1>
+        <p class="u-card__text">
+          I'm a front-end developer and designer based in Missouri. I build accessible, responsive websites and love creating digital experiences that help people connect.
+        </p>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <h2>Latest Projects</h2>
+      <div class="u-grid u-grid--3col">
+        <div class="u-grid__item">
+          <h3 class="u-card__title">Project 1</h3>
+          <a href="catherine-portfolio/project1" class="u-button">View Project</a>
+        </div>
+        <div class="u-grid__item">
+          <h3 class="u-card__title">Project 2</h3>
+          <a href="Resume 8.3.25.html" class="u-button">View Project</a>
+        </div>
+        <div class="u-grid__item">
+          <h3 class="u-card__title">Project 3</h3>
+          <a href="#" class="u-button">View Project</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <address>
+        <p>Email: <a href="mailto:catherine93.mcgraw@gmail.com">catherine93.mcgraw@gmail.com</a></p>
+        <p>Phone: <a href="tel:4173914333">417-391-4333</a></p>
+        <p>
+          <a href="https://www.linkedin.com/in/catherine-mcgraw-205853296" target="_blank">LinkedIn</a> |
+          <a href="https://www.github.com/missmayhem1993" target="_blank">GitHub</a>
+        </p>
+      </address>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="u-footer">
+    <p>&copy; 2025 Catherine McGraw. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    const toggleButton = document.querySelector('.u-navbar__toggle');
+    const menu = document.querySelector('.u-navbar__menu');
+    toggleButton.addEventListener('click', () => {
+      const isOpen = menu.classList.toggle('is-open');
+      toggleButton.setAttribute('aria-expanded', isOpen);
+    });
+  </script>
+</body>
+</html>

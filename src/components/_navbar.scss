@@ -1,0 +1,44 @@
+.u-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: $u-navbar-bg;
+  border-bottom: 1px solid $u-color-border;
+  z-index: 1000;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $u-spacing;
+  }
+
+  &__menu {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+
+    @media (max-width: $u-breakpoint-sm) {
+      display: none;
+      flex-direction: column;
+      background: $u-navbar-bg;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      border-top: 1px solid $u-color-border;
+
+      &.is-open {
+        display: flex;
+      }
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $u-color-text;
+    padding: 0.5rem;
+  }
+}

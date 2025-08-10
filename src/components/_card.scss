@@ -1,0 +1,23 @@
+.u-card {
+  display: flex;
+  gap: 1rem;
+  padding: $u-spacing;
+  margin-top: 5rem; // offset for fixed navbar
+
+  &__image {
+    border: 4px solid $u-color-border;
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 300px;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__content {
+    flex: 1;
+  }
+}
