@@ -1,7 +1,25 @@
+/* src/base/_variables.scss */
+
 $u-color-background: #d36eff;
 $u-color-text: #393838;
-$u-navbar-bg: #32f6cb;
+$u-color-muted: #555555;
+$u-surface: #fafafa;
 $u-color-border: #928e8e;
-$u-spacing: 1rem;
-$u-breakpoint-sm: 768px;
-$u-padding: 1rem;
+$u-border: #c9c9c9;
+
+$u-brand: #0b5fff;            
+$u-brand-contrast: #ffffff;
+
+$u-focus: #ffbf47;
+$u-error: #c81e1e;
+
+$u-radius: 8px;
+$u-spacing-1: .5rem;
+$u-spacing-2: 1rem;
+$u-spacing-3: 1.5rem;
+$u-spacing-4: 2rem;
+
+$u-break-sm: 768px;
+$u-container: 1200px;
+$u-navbar-bg: #32f6cb;
+$u-navbar-height: 64px;       /* fallback for fixed header spacing */

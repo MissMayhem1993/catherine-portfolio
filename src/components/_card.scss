@@ -1,23 +1,45 @@
+@use 'base/variables';
+
+/* src/components/_card.scss */
 .u-card {
+  @extend .u-container;
   display: flex;
-  gap: 1rem;
-  padding: $u-spacing;
-  margin-top: 5rem; // offset for fixed navbar
+  align-items: center;
+  gap: $u-spacing-3;
+  padding-block: $u-spacing-4;
+
+  &--bio { margin-top: $u-spacing-2; }
 
   &__image {
-    border: 4px solid $u-color-border;
-    border-radius: 8px;
+    flex: 0 0 auto;
+    border: 4px solid $u-border;
+    border-radius: $u-radius;
     overflow: hidden;
-    max-width: 300px;
+    background: #fff;
 
     img {
       display: block;
-      width: 100%;
+      width: auto;
+      max-width: 320px;
       height: auto;
+      object-fit: contain;
     }
   }
 
   &__content {
-    flex: 1;
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  &__title { margin: 0 0 .25rem; }
+  &__text { margin: 0; }
+}
+
+@media (max-width: $u-break-sm) {
+  .u-card {
+    flex-direction: column;
+    text-align: center;
+
+    &__image img { max-width: 220px; }
   }
 }

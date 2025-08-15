@@ -2,92 +2,121 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Catherine McGraw | Portfolio</title>
   <link rel="stylesheet" href="dist/style.css" />
 </head>
 <body>
+  <!-- Skip link -->
+  <a class="u-skiplink" href="#main">Skip to main content</a>
   <!-- Navbar -->
-  <nav class="u-navbar" role="navigation" aria-label="Main navigation">
+  <nav class="u-navbar" role="navigation" aria-label="Main">
     <div class="u-navbar__container">
       <a href="#" class="u-navbar__logo">Catherine McGraw</a>
-      <button class="u-navbar__toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
-      <ul class="u-navbar__menu">
-        <li class="u-navbar__item"><a href="#bio" class="u-navbar__link">About</a></li>
+      <!-- Mobile toggle -->
+      <button class="u-navbar__toggle"
+              aria-label="Toggle navigation"
+              aria-expanded="false"
+              aria-controls="primary-menu">☰</button>
+      <ul id="primary-menu" class="u-navbar__menu">
+        <li class="u-navbar__item"><a href="#bio" class="u-navbar__link" aria-current="page">About</a></li>
         <li class="u-navbar__item"><a href="#projects" class="u-navbar__link">Projects</a></li>
         <li class="u-navbar__item"><a href="#contact" class="u-navbar__link">Contact</a></li>
-        <li class="u-navbar__item"><a href="Resume 8.3.25.html" class="u-navbar__link" download>Resume</a></li>
+        <li class="u-navbar__item">
+          <a href="Resume.8.3.25.html" class="u-navbar__link" download>Download Resume</a>
+        </li>
       </ul>
     </div>
   </nav>
-  <!-- Main Content -->
+  <!-- Main -->
   <main id="main" tabindex="-1">
-  <!-- Bio Card -->
-    <section id="bio" class="u-card u-card--bio">
-      <div class="u-card__image">
+    <!-- Bio -->
+    <section id="bio" class="u-card u-card--bio" aria-labelledby="bio-heading">
+      <div class="u-card__image" role="img" aria-label="Headshot of Catherine McGraw">
         <img src="images/bio.jpg" alt="Headshot of Catherine McGraw" />
       </div>
       <div class="u-card__content">
-        <h1 class="u-card__title">Hi, I'm Catherine!</h1>
+        <h1 id="bio-heading" class="u-card__title">Hi, I'm Catherine!</h1>
         <p class="u-card__text">
           I'm a front-end developer and designer based in Missouri. I build accessible, responsive websites and love creating digital experiences that help people connect.
         </p>
       </div>
     </section>
     <!-- Projects -->
-    <section id="projects">
-      <h2>Latest Projects</h2>
+    <section id="projects" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Latest Projects</h2>
       <div class="u-grid u-grid--3col">
-        <div class="u-grid__item">
-          <h3 class="u-card__title">Project 1</h3>
-          <a href="catherine-portfolio/project1" class="u-button">View Project</a>
-        </div>
-        <div class="u-grid__item">
-          <h3 class="u-card__title">Project 2</h3>
-          <a href="Resume 8.3.25.html" class="u-button">View Project</a>
-        </div>
-        <div class="u-grid__item">
-          <h3 class="u-card__title">Project 3</h3>
-          <a href="#" class="u-button">View Project</a>
-        </div>
+        <article class="u-grid__item" aria-labelledby="p1-title">
+          <h3 id="p1-title" class="u-card__title">Project 1: Animal Trading Card</h3>
+          <p class="u-card__text">A fun HTML/CSS project recreating a custom animal trading card.</p>
+          <a href="project1/Crow-card.html" class="u-button" aria-label="View Project 1: Animal Trading Card">View Project</a>
+        </article>
+        <article class="u-grid__item" aria-labelledby="p2-title">
+          <h3 id="p2-title" class="u-card__title">Project 2: Resume Website</h3>
+          <p class="u-card__text">A professional resume page designed to be printable and responsive.</p>
+          <a href="Resume.8.3.25.html" class="u-button" download aria-label="Download Project 2: Resume Website">Download Project</a>
+        </article>
+        <article class="u-grid__item" aria-labelledby="p3-title">
+          <h3 id="p3-title" class="u-card__title">Project 3: Portfolio Website</h3>
+          <p class="u-card__text">This site! Built with semantic HTML and modular SCSS with BEM methodology.</p>
+          <a href="#" class="u-button" aria-label="View Project 3: Portfolio Website">View Project</a>
+        </article>
       </div>
     </section>
-    <!--Skills -->
-    <section id="skills">
-      <h2>Skills</h2>
-      <ul>
-        <li>HTML & CSS</li>
-        <li>JavaScript</li>
-        <li>Sass & SCSS</li>
-        <li>Responsive Design</li>
-        <li>Accessibility</li>
+    <!-- Skills -->
+    <section id="skills" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills</h2>
+      <ul class="u-list">
+        <li class="u-list__item">HTML &amp; CSS</li>
+        <li class="u-list__item">SCSS &amp; BEM Methodology</li>
+        <li class="u-list__item">JavaScript</li>
+        <li class="u-list__item">Responsive Design</li>
+        <li class="u-list__item">Accessibility (a11y)</li>
+        <li class="u-list__item">Version Control (Git)</li>
       </ul>
     </section>
     <!-- Contact -->
-    <section id="contact">
-      <h2>Contact</h2>
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
       <address>
         <p>Email: <a href="mailto:catherine93.mcgraw@gmail.com">catherine93.mcgraw@gmail.com</a></p>
-        <p>Phone: <a href="tel:4173914333">417-391-4333</a></p>
+        <p>Phone: <a href="tel:+14173914333">+1 (417) 391-4333</a></p>
         <p>
-          <a href="https://www.linkedin.com/in/catherine-mcgraw-205853296" target="_blank">LinkedIn</a> |
-          <a href="https://www.github.com/missmayhem1993" target="_blank">GitHub</a>
+          <a href="https://www.linkedin.com/in/catherine-mcgraw-205853296" target="_blank" rel="noopener">LinkedIn</a> |
+          <a href="https://github.com/missmayhem1993" target="_blank" rel="noopener">GitHub</a>
         </p>
       </address>
     </section>
   </main>
   <!-- Footer -->
-  <footer class="u-footer">
+  <footer class="u-footer" role="contentinfo">
     <p>&copy; 2025 Catherine McGraw. All rights reserved.</p>
   </footer>
 
   <!-- Scripts -->
   <script>
-    const toggleButton = document.querySelector('.u-navbar__toggle');
-    const menu = document.querySelector('.u-navbar__menu');
-    toggleButton.addEventListener('click', () => {
-      const isOpen = menu.classList.toggle('is-open');
-      toggleButton.setAttribute('aria-expanded', isOpen);
+    const toggle = document.querySelector('.u-navbar__toggle');
+    const menu = document.getElementById('primary-menu');
+
+    toggle.addEventListener('click', () => {
+      const open = menu.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', String(open));
+      if (open) {
+        // move focus to first link for keyboard users
+        const firstLink = menu.querySelector('.u-navbar__link');
+        firstLink && firstLink.focus();
+      } else {
+        toggle.focus();
+      }
+    });
+
+    // close menu when a link is chosen (mobile)
+    menu.addEventListener('click', (e) => {
+      if (e.target.closest('.u-navbar__link') && window.innerWidth <= 768) {
+        menu.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.focus();
+      }
     });
   </script>
 </body>

@@ -1,15 +1,46 @@
-@import 'base/variables.scss';
-@import 'base/mixins.scss';
+@use 'base/variables';
+
+/* src/base/_global.scss */
+* { box-sizing: border-box; }
+html:focus-within { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
 
 body {
   margin: 0;
-  font-family: 'Lato', sans-serif;
-  background-color: $u-color-background;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.6;
+  background: $u-color-background;
   color: $u-color-text;
+  padding-top: $u-navbar-height; /* keep content below fixed nav */
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+a { color: $u-brand; text-decoration: underline; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid $u-focus;
+  outline-offset: 2px;
+}
+
+/* Skip link */
+.u-skiplink {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: $u-brand;
+  color: $u-brand-contrast;
+  padding: $u-spacing-1 $u-spacing-2;
+  border-radius: $u-radius;
+  z-index: 1001;
+}
+.u-skiplink:focus { left: $u-spacing-2; top: $u-spacing-2; }
+
+/* Container utility */
+.u-container {
+  max-width: $u-container;
+  margin-inline: auto;
+  padding-inline: $u-spacing-2;
 }

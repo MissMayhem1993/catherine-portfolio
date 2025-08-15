@@ -1,6 +1,11 @@
+@use 'base/variables';
+
+/* src/components/_footer.scss */
 .u-footer {
+  margin-top: $u-spacing-4;
+  padding: $u-spacing-3 $u-spacing-2;
+  background: #fff;
+  border-top: 1px solid $u-border;
   text-align: center;
-  padding: $u-spacing;
-  background: $u-navbar-bg;
-  border-top: 1px solid $u-color-border;
+  color: $u-color-muted;
 }

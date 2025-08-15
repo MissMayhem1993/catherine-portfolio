@@ -1,17 +1,36 @@
+@use 'base/variables';
+
+/* src/components/_grid.scss */
 .u-grid {
+  @extend .u-container;
   display: grid;
-  gap: $u-spacing;
+  gap: $u-spacing-2;
 
   &--3col {
     grid-template-columns: repeat(3, 1fr);
-
-    @media (max-width: $u-breakpoint-sm) {
-      grid-template-columns: 1fr;
-    }
+    @media (max-width: $u-break-sm) { grid-template-columns: 1fr; }
   }
 
   &__item {
-    border: 1px solid $u-color-border;
-    padding: $u-spacing;
+    background: $u-surface;
+    border: 1px solid $u-border;
+    border-radius: $u-radius;
+    padding: $u-spacing-2;
   }
+}
+
+/* Button */
+.u-button {
+  display: inline-block;
+  background: $u-brand;
+  color: $u-brand-contrast;
+  padding: .625rem 1rem;
+  border-radius: $u-radius;
+  text-decoration: none;
+  font-weight: 600;
+  border: 2px solid transparent;
+  transition: background-color .2s ease;
+
+  &:hover { background: darken($u-brand, 7%); }
+  &:focus-visible { outline: 3px solid $u-focus; outline-offset: 2px; }
 }

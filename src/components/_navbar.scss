@@ -1,44 +1,72 @@
+@use 'base/variables';
+
+/* src/components/_navbar.scss */
 .u-navbar {
   position: fixed;
-  top: 0;
-  width: 100%;
-  background: $u-navbar-bg;
-  border-bottom: 1px solid $u-color-border;
+  top: 0; left: 0; right: 0;
+  background: #fff;
+  border-bottom: 1px solid $u-border;
   z-index: 1000;
 
   &__container {
-    max-width: 1200px;
-    margin: 0 auto;
+    @extend .u-container;
+    height: $u-navbar-height;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: $u-spacing;
+    justify-content: space-between;
+    gap: $u-spacing-2;
+  }
+
+  &__logo {
+    font-weight: 700;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &__toggle {
+    display: none;
+    background: transparent;
+    border: 2px solid transparent;
+    padding: .25rem .5rem;
+    font-size: 1.25rem;
+    border-radius: $u-radius;
+    cursor: pointer;
+
+    @media (max-width: $u-break-sm) {
+      display: inline-block;
+    }
   }
 
   &__menu {
     display: flex;
+    gap: $u-spacing-2;
     list-style: none;
-    gap: 1rem;
+    margin: 0;
+    padding: 0;
 
-    @media (max-width: $u-breakpoint-sm) {
-      display: none;
-      flex-direction: column;
-      background: $u-navbar-bg;
+    @media (max-width: $u-break-sm) {
       position: absolute;
       top: 100%;
       left: 0;
-      width: 100%;
-      border-top: 1px solid $u-color-border;
+      right: 0;
+      display: none;
+      flex-direction: column;
+      background: #fff;
+      border-bottom: 1px solid $u-border;
+      padding: $u-spacing-2;
+      gap: $u-spacing-1;
 
-      &.is-open {
-        display: flex;
-      }
+      &.is-open { display: flex; }
     }
   }
 
   &__link {
     text-decoration: none;
     color: $u-color-text;
-    padding: 0.5rem;
+    padding: .25rem .5rem;
+    border-radius: $u-radius;
+
+    &:hover { background: $u-surface; }
+    &:focus-visible { outline: 3px solid $u-focus; outline-offset: 2px; }
   }
 }
