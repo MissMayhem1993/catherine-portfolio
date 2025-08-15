@@ -1,3 +1,5 @@
+@import 'base/variables.scss';
+
 // base/_mixins.scss
 @mixin respond-to($breakpoint) {
   @if $breakpoint == sm {

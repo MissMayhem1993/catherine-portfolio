@@ -1,8 +1,9 @@
-@import 'base/global';
+
+@import 'base/global.scss';
 @import 'base/mixins.scss';
-@import 'base/variables';
+@import 'base/variables.scss';
 @import 'components/button.scss';
-@import 'components/card';
-@import 'components/footer';
-@import 'components/grid';
-@import 'components/navbar';
+@import 'components/card.scss';
+@import 'components/footer.scss';
+@import 'components/grid.scss';
+@import 'components/navbar.scss';
